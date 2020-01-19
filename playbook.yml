@@ -22,6 +22,7 @@
     - iptables
     - calico
     - token
+    - kubectl
 
 - hosts: nodes
   become: true

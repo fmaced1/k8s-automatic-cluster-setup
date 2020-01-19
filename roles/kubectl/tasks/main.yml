@@ -1,0 +1,6 @@
+- name: Kubectl aliases
+  blockinfile:
+    path: ~/.bash_aliases
+    block: |
+      alias k=\"kubectl\"
+      source <(kubectl completion bash)
