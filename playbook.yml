@@ -19,10 +19,11 @@
     - kubelet
     - kubeadm
     - kubeconfig
+    - kubectl
     - iptables
     - calico
     - token
-    - kubectl
+    - helm
 
 - hosts: nodes
   become: true
