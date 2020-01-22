@@ -2,6 +2,9 @@
 
 This is a guide for anyone wanting to setup multi-node kubernetes cluster.
 
+# Force delete pods with terminating state
+kubectl delete pod <PODNAME> --grace-period=0 --force --namespace <NAMESPACE>
+
 &nbsp;
 
 
