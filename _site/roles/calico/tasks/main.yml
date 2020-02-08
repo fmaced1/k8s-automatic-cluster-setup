@@ -1,0 +1,17 @@
+- name: Download calico pod network
+  get_url:
+    url: https://docs.projectcalico.org/v3.11/manifests/calico.yaml
+    dest: /tmp/calico.yaml
+    mode: '0777'
+
+- name: Replace pod-network-address in calico.yaml
+  replace:
+    path: /tmp/calico.yaml
+    regexp: '192.168.0.0/16'
+    replace: '172.16.0.0/16'
+    backup: yes
+
+- name: Apply calico pod network
+  become: false
+  shell: |
+    kubectl apply -f /tmp/calico.yaml

@@ -1,0 +1,9 @@
+helm repo add istio.io https://storage.googleapis.com/istio-release/releases/1.4.2/charts/
+helm repo update
+helm repo list | grep istio.io
+helm install --name=istio-init istio.io/istio-init
+kubectl get crds | grep 'istio.io' | wc -l # wait for output 23
+helm install --name=istio istio.io/istio --set grafana.enabled=true
+
+kubectl label namespace mynamespace istio-injection=enabled
+kubectl get namespace -L istio-injection

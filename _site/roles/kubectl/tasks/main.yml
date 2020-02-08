@@ -1,0 +1,8 @@
+- name: Kubectl aliases
+  blockinfile:
+    path: /home/vagrant/.bash_aliases
+    state: present
+    create: yes
+    block: |
+      alias k=\"kubectl\"
+      source <(kubectl completion bash)
