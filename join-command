@@ -1,1 +1,1 @@
-kubeadm join 192.168.50.21:6443 --token cdtrx1.x0jtiyicky3ezv11     --discovery-token-ca-cert-hash sha256:e17394a9f3da0a3cfeda84f0c863bb4d0f8fa8f21a2f8df17bbaf957c4d600d4 
+kubeadm join 192.168.50.21:6443 --token qz7bls.zw21e7814fooptvl     --discovery-token-ca-cert-hash sha256:d745284c3960ee28815230c252f44fca0f613b004727e1a0a95ac0d0f1becf2c 
